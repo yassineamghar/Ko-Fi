@@ -1,0 +1,170 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x00007f7aed26ff74, pid=64836, tid=64870
+#
+
+[error occurred during error reporting (printing Java version string), id 0x7, SIGBUS (0x7) at pc=0x00007f7aecb0790b]
+
+# Problematic frame:
+# 
+[error occurred during error reporting (printing problematic frame), id 0x7, SIGBUS (0x7) at pc=0x00007f7aed26ff74]
+
+# No core dump will be written. 
+#
+
+[error occurred during error reporting (printing bug submit message), id 0x7, SIGBUS (0x7) at pc=0x00007f7aecb07e61]
+
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dawt.toolkit=com.intellij.desktop.DesktopActionsToolkit -Djava.rmi.server.hostname=127.0.0.1 -Duser.timezone=UTC -Xmx1024m -Xms128m --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.desktop/java.awt.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=jdk.unsupported/sun.misc=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED -Dfile.encoding=UTF-8 com.intellij.database.remote.RemoteJdbcServer org.postgresql.Driver
+
+Host: 
+[error occurred during error reporting (printing summary machine and OS info), id 0x7, SIGBUS (0x7) at pc=0x00007f7aed27d2a9]
+
+
+[error occurred during error reporting (printing date and time), id 0x7, SIGBUS (0x7) at pc=0x00007f7aed21cb89]
+
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f7a6c001130):  JavaThread "RMI TCP Connection(2)-127.0.0.1" daemon [_thread_in_vm, id=64870, stack(0x00007f7a88700000,0x00007f7a88800000)]
+
+Stack: [0x00007f7a88700000,0x00007f7a88800000],  sp=0x00007f7a887fcd58,  free space=1011k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+[error occurred during error reporting (printing native stack), id 0x7, SIGBUS (0x7) at pc=0x00007f7aed26ff74]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+v  ~UncommonTrapBlob
+J 1744 c2 java.io.BufferedInputStream.read()I java.base@17.0.4 (49 bytes) @ 0x00007f7adc75a204 [0x00007f7adc759bc0+0x0000000000000644]
+J 1727 c1 java.io.FilterInputStream.read()I java.base@17.0.4 (8 bytes) @ 0x00007f7ad54bf13c [0x00007f7ad54bf040+0x00000000000000fc]
+j  sun.rmi.transport.tcp.TCPTransport.handleMessages(Lsun/rmi/transport/Connection;Z)V+25
+[error occurred during error reporting (printing Java stack), id 0x7, SIGBUS (0x7) at pc=0x00007f7aeca3292b]
+
+
+siginfo: si_signo: 7 (SIGBUS), si_code: 2 (BUS_ADRERR), si_addr: 0x00007f7ae401f068
+
+Register to memory mapping:
+
+RAX=
+[error occurred during error reporting (printing register info), id 0x7, SIGBUS (0x7) at pc=0x00007f7aecb02579]
+
+Registers:
+RAX=0x00007f7a50000d30, RBX=0x00007f7ae401f050, RCX=0x0000000000000018, RDX=0x00007f7a6c001f90
+RSP=0x00007f7a887fcd58, RBP=0x00007f7a887fcd70, RSI=0x000000000000a5a2, RDI=0x00007f7ae401f058
+R8 =0x0000000000000644, R9 =0x00007f7ae3e2a000, R10=0x00007ffe017db080, R11=0x00007ffe017db090
+R12=0x00007f7a6c001130, R13=0x00007f7aecbceb90, R14=0x00007f7ae401f050, R15=0x00000000ffffff45
+RIP=0x00007f7aed26ff74, EFLAGS=0x0000000000010206, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f7a887fcd58)
+0x00007f7a887fcd58:   00007f7aec78e2b6 00007f7ae401f040
+0x00007f7a887fcd68:   00007f7a6c001130 00007f7a887fce80
+0x00007f7a887fcd78:   00007f7aec21656e 00007f7a887fce00
+0x00007f7a887fcd88:   40b806c9b3579b47 00007f7a887fce20 
+
+Instructions: (pc=0x00007f7aed26ff74)
+0x00007f7aed26fe74:   00 00 08 6c 00 00 00 89 c1 48 d3 ea 80 e2 01 0f
+0x00007f7aed26fe84:   84 4f fc ff ff e9 7b ff ff ff 66 90 83 f8 23 0f
+0x00007f7aed26fe94:   85 3f fb ff ff e9 b8 fd ff ff 41 b8 23 00 00 00
+0x00007f7aed26fea4:   e9 85 fa ff ff 41 8b 06 83 e0 7f 83 f8 12 74 61
+0x00007f7aed26feb4:   83 f8 11 0f 85 1a fd ff ff 64 48 c7 04 25 f0 02
+0x00007f7aed26fec4:   00 00 00 00 00 00 8b 45 04 83 f8 ff 0f 84 15 ff
+0x00007f7aed26fed4:   ff ff 83 c0 01 89 45 04 e9 4d fa ff ff 0f 1f 80
+0x00007f7aed26fee4:   00 00 00 00 be 80 00 00 00 48 89 ef e8 ab 94 ff
+0x00007f7aed26fef4:   ff e9 0f ff ff ff 83 c0 0b 83 f8 0b 0f 87 d2 fb
+0x00007f7aed26ff04:   ff ff 48 0f a3 c3 0f 83 c8 fb ff ff e9 e3 fc ff
+0x00007f7aed26ff14:   ff 64 48 c7 04 25 f0 02 00 00 00 00 00 00 41 b8
+0x00007f7aed26ff24:   23 00 00 00 e9 01 fa ff ff e8 ee e7 09 00 48 8d
+0x00007f7aed26ff34:   0d 07 99 14 00 ba b6 01 00 00 48 8d 35 49 16 14
+0x00007f7aed26ff44:   00 48 8d 3d 57 16 14 00 e8 ff 1e fa ff 48 8d 0d
+0x00007f7aed26ff54:   e8 98 14 00 ba 53 02 00 00 48 8d 35 2a 16 14 00
+0x00007f7aed26ff64:   48 8d 3d 4e 16 14 00 e8 e0 1e fa ff f3 0f 1e fa
+0x00007f7aed26ff74:   8b 47 10 89 c2 81 e2 7f 01 00 00 90 83 e0 7c 0f
+0x00007f7aed26ff84:   85 a7 00 00 00 53 48 83 ec 10 85 d2 0f 85 a2 00
+0x00007f7aed26ff94:   00 00 44 8b 0d f7 3a 18 00 45 85 c9 75 5e 8b 77
+0x00007f7aed26ffa4:   10 81 e6 80 00 00 00 75 0c 64 8b 04 25 18 00 00
+0x00007f7aed26ffb4:   00 85 c0 74 37 31 c0 ba 01 00 00 00 f0 0f b1 17
+0x00007f7aed26ffc4:   0f 85 ae 00 00 00 8b 4f 08 85 c9 0f 85 5c 01 00
+0x00007f7aed26ffd4:   00 64 8b 04 25 d0 02 00 00 89 47 08 83 47 0c 01
+0x00007f7aed26ffe4:   90 31 c0 48 83 c4 10 5b c3 0f 1f 00 44 8b 07 45
+0x00007f7aed26fff4:   85 c0 75 c1 c7 07 01 00 00 00 eb ca 8b 47 10 f6
+0x00007f7aed270004:   c4 03 74 08 f6 c4 01 74 95 eb 07 90 80 cc 01 89
+0x00007f7aed270014:   47 10 8b 57 10 48 83 c4 10 48 8d 77 16 5b 81 e2
+0x00007f7aed270024:   80 00 00 00 e9 63 8d ff ff 0f 1f 00 e9 eb f7 ff
+0x00007f7aed270034:   ff 0f 1f 00 81 fa 00 01 00 00 74 d6 8b 57 10 83
+0x00007f7aed270044:   e2 7f 83 fa 01 0f 85 95 00 00 00 64 8b 04 25 d0
+0x00007f7aed270054:   02 00 00 39 47 08 75 30 8b 47 04 83 f8 ff 0f 84
+0x00007f7aed270064:   bf 00 00 00 83 c0 01 89 47 04 31 c0 e9 72 ff ff 
+
+
+Stack slot to memory mapping:
+stack at sp + 0 slots: 
+[error occurred during error reporting (inspecting top of stack), id 0x7, SIGBUS (0x7) at pc=0x00007f7aecb02579]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007f7a180019e0, length=21, elements={
+0x00007f7ae4025410, 0x00007f7ae41784e0, 0x00007f7ae4179b30, 0x00007f7ae41a00f0,
+0x00007f7ae41a14a0, 0x00007f7ae41a28b0, 0x00007f7ae41a3f30, 0x00007f7ae41a5410,
+0x00007f7ae41a6880, 0x00007f7ae425b680, 0x00007f7ae425ea60, 0x00007f7ae4401880,
+0x00007f7ae4408930, 0x00007f7ae4457900, 0x00007f7ae4460450, 0x00007f7ae4461770,
+0x00007f7ae44636b0, 0x00007f7a680025a0, 0x00007f7a580248c0, 0x00007f7a6c001130,
+0x00007f7a50010330
+}
+
+Java Threads: ( => current thread )
+  0x00007f7ae4025410 JavaThread "main" [_thread_in_vm, id=64840, stack(0x00007f7aebb00000,0x00007f7aebc00000)]
+  0x00007f7ae41784e0 JavaThread "Reference Handler" daemon [_thread_blocked, id=64847, stack(0x00007f7ad0300000,0x00007f7ad0400000)]
+  0x00007f7ae4179b30 JavaThread "Finalizer" daemon [_thread_blocked, id=64848, stack(0x00007f7ad0200000,0x00007f7ad0300000)]
+  0x00007f7ae41a00f0 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=64849, stack(0x00007f7ad0100000,0x00007f7ad0200000)]
+  0x00007f7ae41a14a0 JavaThread "Service Thread" daemon [_thread_blocked, id=64850, stack(0x00007f7ad0000000,0x00007f7ad0100000)]
+  0x00007f7ae41a28b0 JavaThread "Monitor Deflation Thread" daemon [_thread_blocked, id=64851, stack(0x00007f7ac1118000,0x00007f7ac1218000)]
+  0x00007f7ae41a3f30 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=64852, stack(0x00007f7ac1018000,0x00007f7ac1118000)]
+  0x00007f7ae41a5410 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=64853, stack(0x00007f7ac0f18000,0x00007f7ac1018000)]
+  0x00007f7ae41a6880 JavaThread "Sweeper thread" daemon [_thread_blocked, id=64854, stack(0x00007f7ac0e18000,0x00007f7ac0f18000)]
+  0x00007f7ae425b680 
+[error occurred during error reporting (printing all threads), id 0x7, SIGBUS (0x7) at pc=0x00007f7aec13a220]
+
+VM state: not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x00000000c0000000, size: 1024 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) not mapped
+Compressed class space mapped at: 0x0000000100000000-0x0000000140000000, reserved size: 1073741824
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3, Narrow klass range: 0x140000000
+
+GC Precious Log:
+ CPUs: 8 total, 8 available
+ Memory: 7640M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (32-bit)
+ Heap Region Size: 1M
+ Heap Min Capacity: 128M
+ Heap Initial Capacity: 128M
+ Heap Max Capacity: 1G
+ Pre-touch: Disabled
+ Parallel Workers: 8
+ Concurrent Workers: 2
+ Concurrent Refinement Workers: 8
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total 131072K, used 9321K [0x00000000c0000000, 0x0000000100000000)
+  region size 1024K, 5 young (5120K), 0 survivors (0K)
+ Metaspace       used 23965K, committed 24384K, reserved 1073152K
+  class space    used 2448K, committed 2624K, reserved 1048576K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, OA=open archive, CA=closed archive, TAMS=top-at-mark-start (previous, next)
+|   0|0x00000000c0000000, 0x00000000c0100000, 0x00000000c0100000|100%| O|  |TAMS 0x00000000c0100000, 0x00000000c0000000| Untracked 
+|   1|0x00000000c0100000, 0x00000000c01fffe8, 0x00000000c0200000| 99%| O|  |TAMS 0x00000000c0100000, 0x00000000c0100000| Untracked 
+|   2|0x00000000c0200000, 0x00000000c02fffe0, 0x00000000c0300000| 99%| O|  |TAMS 0x00000000c0200000, 0x00000000c0200000| Untracked 
+|   3|0x00000000c0300000, 0x00000000c03ef5b8, 0x00000000c0400000| 93%| O|  |TAMS 0x00000000c0300000, 0x00000000c0300000| Untracked 
+|   4|0x00000000c0400000, 0x00000000c0461f90, 0x00000000c0500000| 38%| O|  |TAMS 0x00000000c0400000, 0x00000000c0400000| Untracked 

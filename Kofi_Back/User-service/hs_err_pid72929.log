@@ -1,0 +1,51 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x00007fc6652eb6ab, pid=72929, tid=73005
+#
+# JRE version: OpenJDK Runtime Environment (19.0+36) (build 19+36-2238)
+# Java VM: OpenJDK 64-Bit Server VM (19+36-2238, mixed mode, emulated-client, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, linux-amd64)
+# Problematic frame:
+# J 582 c1 java.util.TreeMap.addEntryToEmptyMap(Ljava/lang/Object;Ljava/lang/Object;)V java.base@19 (37 bytes) @ 0x00007fc6652eb6ab [0x00007fc6652eb560+0x000000000000014b]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport -p%p -s%s -c%c -d%d -P%P -u%u -g%g -- %E" (or dumping to /home/abdo/Documents/Ko-fi/login-registration-backend-master/core.72929)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:TieredStopAtLevel=1 -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -javaagent:/home/abdo/Downloads/ideaIU-2022.2.2/idea-IU-222.4167.29/lib/idea_rt.jar=35549:/home/abdo/Downloads/ideaIU-2022.2.2/idea-IU-222.4167.29/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 com.example.demo.DemoApplication
+
+Host: Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz, 8 cores, 7G, Ubuntu 22.04.1 LTS
+Time: Tue Jan 17 20:23:32 2023 +01 elapsed time: 531.566090 seconds (0d 0h 8m 51s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fc670c84680):  JavaThread "Catalina-utility-1" [_thread_in_Java, id=73005, stack(0x00007fc6516f6000,0x00007fc6517f6000)]
+
+Stack: [0x00007fc6516f6000,0x00007fc6517f6000],  sp=0x00007fc6517f3fd0,  free space=1015k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+J 582 c1 java.util.TreeMap.addEntryToEmptyMap(Ljava/lang/Object;Ljava/lang/Object;)V java.base@19 (37 bytes) @ 0x00007fc6652eb6ab [0x00007fc6652eb560+0x000000000000014b]
+J 482 c1 java.util.TreeMap.put(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object; java.base@19 (221 bytes) @ 0x00007fc6652ce864 [0x00007fc6652ce5a0+0x00000000000002c4]
+J 481 c1 java.util.TreeMap.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; java.base@19 (8 bytes) @ 0x00007fc6652ccbdc [0x00007fc6652ccba0+0x000000000000003c]
+J 4032 c1 java.util.TreeSet.add(Ljava/lang/Object;)Z java.base@19 (22 bytes) @ 0x00007fc66586f60c [0x00007fc66586f5c0+0x000000000000004c]
+J 2052 c1 java.util.AbstractCollection.addAll(Ljava/util/Collection;)Z java.base@19 (42 bytes) @ 0x00007fc665526664 [0x00007fc6655265e0+0x0000000000000084]
+j  java.util.TreeSet.addAll(Ljava/util/Collection;)Z+78 java.base@19
+j  org.apache.catalina.webresources.Cache.backgroundProcess()V+26
+j  org.apache.catalina.webresources.StandardRoot.backgroundProcess()V+4
+j  org.apache.catalina.core.StandardContext.backgroundProcess()V+111
+j  org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(Lorg/apache/catalina/Container;)V+55
+j  org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(Lorg/apache/catalina/Container;)V+105
+j  org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(Lorg/apache/catalina/Container;)V+105
+j  org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run()V+5
+J 5767 c1 java.util.concurrent.Executors$RunnableAdapter.call()Ljava/lang/Object; java.base@19 (14 bytes) @ 0x00007fc66515928c [0x00007fc665159240+0x000000000000004c]
+J 5766 c1 java.util.concurrent.FutureTask.runAndReset()Z java.base@19 (125 bytes) @ 0x00007fc665159854 [0x00007fc6651596c0+0x0000000000000194]
+J 5764 c1 java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run()V java.base@19 (57 bytes) @ 0x00007fc66515ad14 [0x00007fc66515ac80+0x0000000000000094]
+j  java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V+92 java.base@19
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+5 java.base@19
+j  org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run()V+4
+j  java.lang.Thread.run()V+13 java.base@19
+v  ~StubRoutines::call_stub 0x00007fc664ff8cc6
+V  [libjvm.so+0x882925]
